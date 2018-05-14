@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exit Popup</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="js/ouibounce.min.js"></script>
+
+</head>
+<body>
+
+    <div id="ouibounce-modal">
+        <div class="underlay"></div>
+        <div class="modal">
+            <div class="modal-title">
+                <h3>DESISTIU DE EMAGRECER?</h3>
+            </div>
+    
+            <div class="modal-body">
+                <p>Calma! Esqueci de te dar esse presente...</p>
+                <p><span class="bg-destaque">Mais de 10% de Desconto</span> para você LEVAR</p>
+                <p class="ti-destaque">VOCÊ ACEITA?</p>
+            </div>
+    
+            <div class="modal-footer">
+                <button onclick="document.getElementById('ouibounce-modal').style.display = 'none';" class="button-two">NÃO, 
+                    <span style="font-size: 18px;">Eu Destesto Desconto!</span>
+                </button> 
+                <button onClick="window.location='#';" class="button-one">SIM, 
+                    <span style="font-size: 18px;">Eu Quero Desconto!</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'),{
+            aggressive: true, //Making this true makes ouibounce not to obey "once per visitor" rule
+        });
+    </script>
+</body>
+</html>
